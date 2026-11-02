@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Estoque</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/estoque.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                <i class="fa-solid fa-boxes-stacked"></i>
+                <h2>Controle de Estoque</h2>
+                <span>Estoque</span>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+                    <li><a href="cadastro.html"><i class="fa-solid fa-plus"></i> Cadastro</a></li>
+                    <li><a href="estoque.html"><i class="fa-solid fa-box"></i> Estoque</a></li>
+                    <li><a href="descarte.html"><i class="fa-solid fa-recycle"></i> Descarte</a></li>
+                    <li><a href="relatorios.html"><i class="fa-solid fa-chart-column"></i> Relatórios</a></li>
+                    <li><a href="../index.html" id="logout"><i class="fa-solid fa-right-from-bracket"></i> Sair</a></li>
+                </ul>
+            </nav>
+
+        </aside>
+
+        <main class="content">
+
+            <header>
+                <h1>Estoque</h1>
+                <p>Controle completo de materiais cadastrados</p>
+            </header>
+
+            <div class="table-card">
+
+                <div class="table-wrapper">
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Produto</th>
+                                <th>Categoria</th>
+                                <th>Quantidade</th>
+                                <th>Unidade</th>
+                                <th>Fornecedor</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tabelaEstoque"></tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- modal de edição -->
+    <div id="modal" class="modal">
+
+        <div class="modal-content">
+
+            <h2>Editar Material</h2>
+
+            <div class="input-group">
+                <label for="editProduto">Produto</label>
+                <input type="text" id="editProduto" placeholder="Nome do produto" required>
+            </div>
+
+            <div class="input-group">
+                <label for="editCategoria">Categoria</label>
+
+                <select id="editCategoria" required>
+                    <option value="">Selecione uma categoria</option>
+                    <option value="Embalagens">Embalagens</option>
+                    <option value="Acabamento">Acabamento</option>
+                    <option value="Ferramentas">Ferramentas</option>
+                    <option value="Elétricos">Elétricos</option>
+                    <option value="Fixadores">Fixadores</option>
+                    <option value="Outros">Outros</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="editQuantidade">Quantidade</label>
+                <input type="number" id="editQuantidade" min="0" step="1" required>
+            </div>
+
+            <div class="input-group">
+                <label for="editUnidade">Unidade</label>
+                <input type="text" id="editUnidade" placeholder="Ex.: Unidade, kg, caixa">
+            </div>
+
+            <div class="input-group">
+                <label for="editFornecedor">Fornecedor</label>
+                <input type="text" id="editFornecedor" placeholder="Nome do fornecedor">
+            </div>
+
+            <button type="button" id="btnSalvarEdicao">Salvar</button>
+
+            <button type="button" id="btnCancelarEdicao">Cancelar</button>
+
+        </div>
+
+    </div>
+
+    <!-- armazenamento local -->
+    <script src="../js/storage.js"></script>
+
+    <!-- lógica do estoque -->
+    <script src="../js/estoque.js"></script>
+
+</body>
+</html>

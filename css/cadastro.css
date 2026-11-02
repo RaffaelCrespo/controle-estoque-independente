@@ -1,0 +1,105 @@
+/* card */
+.form-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0,0,0,.08);
+    max-width: 800px;
+}
+
+/* header pro form */
+.form-header {
+    margin-bottom: 20px;
+}
+
+.form-header h2 {
+    color: #1E3A8A;
+    font-size: 22px;
+}
+
+.form-header p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* grid */
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* input group */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-group label {
+    font-size: 13px;
+    color: #374151;
+}
+
+/* input */
+.input-group input,
+.input-group select,
+.input-group textarea {
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    outline: none;
+    background: #f9fafb;
+    transition: .2s;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* foco */
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: #2563EB;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(37,99,235,.12);
+}
+
+.input-group textarea {
+    height: 100px;
+    resize: none;
+}
+
+.full {
+    grid-column: 1 / -1;
+}
+
+/* botões */
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-salvar {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg,#2563EB,#1E3A8A);
+    color: white;
+    cursor: pointer;
+}
+
+.btn-limpar {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #ef4444;
+    color: white;
+    cursor: pointer;
+}
+
+/* hover */
+.btn-salvar:hover,
+.btn-limpar:hover {
+    transform: translateY(-2px);
+}

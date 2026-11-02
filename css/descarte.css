@@ -1,0 +1,114 @@
+
+/* formulário de descarte */
+
+.card-form {
+    width: 100%;
+    max-width: 520px;
+
+    background: #fff;
+    padding: 25px;
+    margin-top: 20px;
+
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* campos */
+
+.card-form .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.card-form label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.card-form input,
+.card-form select {
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+
+    background: #f9fafb;
+    color: #374151;
+
+    font-size: 14px;
+    font-family: inherit;
+
+    outline: none;
+    transition: 0.2s ease;
+}
+
+/* foco dos campos */
+
+.card-form input:focus,
+.card-form select:focus {
+    border-color: #2563EB;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* botão */
+
+.card-form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: 100%;
+    padding: 13px;
+
+    background: #1E3A8A;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+    font-family: inherit;
+
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.card-form button:hover {
+    background: #2563EB;
+}
+
+.card-form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* responsividade */
+
+@media (max-width: 768px) {
+    .card-form {
+        max-width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-form {
+        padding: 18px;
+        gap: 15px;
+    }
+
+    .card-form input,
+    .card-form select {
+        padding: 11px;
+    }
+}

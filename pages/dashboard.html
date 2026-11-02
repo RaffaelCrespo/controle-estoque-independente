@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- sidebar -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <i class="fa-solid fa-boxes-stacked"></i>
+                <h2>Controle de Estoque</h2>
+                <span>São José dos Pinhais</span>
+            </div>
+
+            <nav>
+                <ul>
+
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="fa-solid fa-house"></i> Dashboard
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="cadastro.html">
+                            <i class="fa-solid fa-plus"></i> Cadastro
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="estoque.html">
+                            <i class="fa-solid fa-box"></i> Estoque
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="descarte.html">
+                            <i class="fa-solid fa-recycle"></i> Descarte
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="relatorios.html">
+                            <i class="fa-solid fa-chart-column"></i> Relatórios
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html" id="logout">
+                            <i class="fa-solid fa-right-from-bracket"></i> Sair
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </aside>
+
+        <!-- conteúdo -->
+        <main class="content">
+
+            <header>
+                <h1>Dashboard</h1>
+                <p>Carregando...</p>
+            </header>
+
+            <!-- cards -->
+            <section class="cards">
+
+                <div class="card">
+                    <h2>0</h2>
+                    <span>Materiais</span>
+                </div>
+
+                <div class="card">
+                    <h2>0</h2>
+                    <span>Recicláveis</span>
+                </div>
+
+                <div class="card">
+                    <h2>0</h2>
+                    <span>Entradas</span>
+                </div>
+
+                <div class="card">
+                    <h2>0</h2>
+                    <span>Saídas</span>
+                </div>
+
+            </section>
+
+            <!-- gráfico -->
+            <section class="grafico">
+
+                <h2>Movimentações do Estoque</h2>
+                <canvas id="graficoEstoque"></canvas>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- biblioteca de gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- armazenamento local -->
+    <script src="../js/storage.js"></script>
+
+    <!-- lógica do dashboard -->
+    <script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Descarte</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/estoque.css">
+    <link rel="stylesheet" href="../css/descarte.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                <i class="fa-solid fa-boxes-stacked"></i>
+                <h2>Controle de Estoque</h2>
+                <span>Descarte</span>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+                    <li><a href="cadastro.html"><i class="fa-solid fa-plus"></i> Cadastro</a></li>
+                    <li><a href="estoque.html"><i class="fa-solid fa-box"></i> Estoque</a></li>
+                    <li><a href="descarte.html"><i class="fa-solid fa-recycle"></i> Descarte</a></li>
+                    <li><a href="relatorios.html"><i class="fa-solid fa-chart-column"></i> Relatórios</a></li>
+                    <li><a href="../index.html" id="logout"><i class="fa-solid fa-right-from-bracket"></i> Sair</a></li>
+                </ul>
+            </nav>
+
+        </aside>
+
+        <main class="content">
+
+            <header>
+                <h1>Descarte de Materiais ♻️</h1>
+                <p>Registrar baixa no estoque</p>
+            </header>
+
+            <div class="card-form">
+
+                <div class="input-group">
+                    <label for="materialSelect">Material</label>
+
+                    <select id="materialSelect" required>
+                        <option value="">Carregando materiais...</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="quantidade">Quantidade</label>
+
+                    <input
+                        type="number"
+                        id="quantidade"
+                        min="1"
+                        step="1"
+                        placeholder="Informe a quantidade"
+                        required>
+                </div>
+
+                <div class="input-group">
+                    <label for="motivoSelect">Motivo do descarte</label>
+
+                    <select id="motivoSelect" required>
+                        <option value="Quebra">Quebra</option>
+                        <option value="Inutilizado">Inutilizado</option>
+                        <option value="Vencido">Vencido</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+
+                <div class="input-group" id="grupoMotivoOutro" style="display: none;">
+                    <label for="motivoOutro">Descreva o motivo</label>
+
+                    <input
+                        type="text"
+                        id="motivoOutro"
+                        placeholder="Digite o motivo do descarte">
+                </div>
+
+                <button type="button" id="btnRegistrarDescarte">
+                    <i class="fa-solid fa-recycle"></i>
+                    Registrar Descarte
+                </button>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- armazenamento local -->
+    <script src="../js/storage.js"></script>
+
+    <!-- lógica de descarte -->
+    <script src="../js/descarte.js"></script>
+
+</body>
+</html>

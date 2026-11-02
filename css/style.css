@@ -1,0 +1,362 @@
+
+/* configurações gerais */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+}
+
+
+/* fundo */
+
+.background {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* card de login */
+
+.login-card {
+    width: 100%;
+    max-width: 430px;
+
+    background: #fff;
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+
+    animation: fade 0.6s ease;
+}
+
+
+/* logo */
+
+.logo {
+    width: 90px;
+    height: 90px;
+
+    margin: 0 auto 20px;
+
+    background: #2563eb;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 42px;
+}
+
+
+/* títulos */
+
+h1 {
+    text-align: center;
+
+    color: #1f2937;
+
+    font-size: 28px;
+    font-weight: 700;
+}
+
+h2 {
+    text-align: center;
+
+    color: #2563eb;
+
+    font-size: 18px;
+
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.descricao {
+    text-align: center;
+
+    color: #6b7280;
+
+    font-size: 14px;
+
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+
+/* campos */
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #374151;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* caixa dos inputs */
+
+.input-box {
+    display: flex;
+    align-items: center;
+
+    background: #f3f4f6;
+
+    border: 2px solid transparent;
+    border-radius: 10px;
+
+    padding: 12px;
+
+    transition: 0.2s ease;
+}
+
+.input-box:hover {
+    border-color: #2563eb;
+}
+
+.input-box:focus-within {
+    border-color: #2563eb;
+    background: #fff;
+}
+
+
+/* ícones */
+
+.input-box i {
+    color: #2563eb;
+
+    margin-right: 10px;
+
+    font-size: 18px;
+}
+
+
+/* inputs */
+
+.input-box input {
+    width: 100%;
+    min-width: 0;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-size: 15px;
+    color: #374151;
+}
+
+.input-box input::placeholder {
+    color: #9ca3af;
+}
+
+
+/* lembrar-me */
+
+.remember {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 25px;
+
+    color: #555;
+    font-size: 14px;
+}
+
+.remember input {
+    width: 16px;
+    height: 16px;
+
+    accent-color: #2563eb;
+
+    cursor: pointer;
+}
+
+.remember label {
+    cursor: pointer;
+}
+
+
+/* botão */
+
+button {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 15px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* rodapé */
+
+.footer {
+    margin-top: 30px;
+
+    text-align: center;
+
+    color: #9ca3af;
+
+    font-size: 13px;
+    line-height: 22px;
+}
+
+
+/* responsividade */
+
+@media (max-width: 500px) {
+
+    .login-card {
+        padding: 30px 24px;
+    }
+
+    .logo {
+        width: 70px;
+        height: 70px;
+
+        font-size: 30px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .descricao {
+        font-size: 13px;
+    }
+
+}
+
+@media (max-height: 650px) {
+
+    body,
+    .background {
+        align-items: flex-start;
+    }
+
+    .background {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .login-card {
+        padding: 25px;
+    }
+
+    .logo {
+        width: 65px;
+        height: 65px;
+
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+
+    .descricao {
+        margin-bottom: 18px;
+    }
+
+    .input-group {
+        margin-bottom: 14px;
+    }
+
+}
+
+
+/* animação */
+
+@keyframes fade {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* preferência, menos animações */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}

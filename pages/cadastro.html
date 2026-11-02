@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/cadastro.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                <i class="fa-solid fa-boxes-stacked"></i>
+                <h2>Controle de Estoque</h2>
+                <span>Cadastro</span>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+                    <li><a href="cadastro.html"><i class="fa-solid fa-plus"></i> Cadastro</a></li>
+                    <li><a href="estoque.html"><i class="fa-solid fa-box"></i> Estoque</a></li>
+                    <li><a href="descarte.html"><i class="fa-solid fa-recycle"></i> Descarte</a></li>
+                    <li><a href="relatorios.html"><i class="fa-solid fa-chart-column"></i> Relatórios</a></li>
+                    <li><a href="../index.html" id="logout"><i class="fa-solid fa-right-from-bracket"></i> Sair</a></li>
+                </ul>
+            </nav>
+
+        </aside>
+
+        <main class="content">
+
+            <header>
+                <h1>Cadastro de Materiais</h1>
+                <p>Adicione novos itens ao estoque</p>
+            </header>
+
+            <div class="form-card">
+
+                <div class="form-header">
+                    <h2>📦 Novo Material</h2>
+                    <p>Preencha os dados corretamente</p>
+                </div>
+
+                <form class="form" id="formCadastro">
+
+                    <div class="input-group">
+                        <label>Produto</label>
+                        <input type="text" id="produto" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Categoria</label>
+                        <select id="categoria" required>
+                            <option value="">Selecione uma categoria</option>
+                            <option value="Embalagens">Embalagens</option>
+                            <option value="Acabamento">Acabamento</option>
+                            <option value="Ferramentas">Ferramentas</option>
+                            <option value="Elétricos">Elétricos</option>
+                            <option value="Fixadores">Fixadores</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Quantidade</label>
+                        <input type="number" id="quantidade" min="1" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Unidade</label>
+                        <input type="text" id="unidade">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Fornecedor</label>
+                        <input type="text" id="fornecedor">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Reciclável</label>
+                        <select id="reciclavel">
+                            <option value="">Selecione</option>
+                            <option value="Sim">Sim</option>
+                            <option value="Não">Não</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group full">
+                        <label>Descrição</label>
+                        <textarea id="descricao"></textarea>
+                    </div>
+
+                    <div class="buttons full">
+                        <button type="submit" class="btn-salvar">💾 Salvar Material</button>
+                        <button type="reset" class="btn-limpar">🧹 Limpar</button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- armazenamento local -->
+    <script src="../js/storage.js"></script>
+
+    <!-- cadastro -->
+    <script src="../js/cadastro.js"></script>
+
+</body>
+</html>

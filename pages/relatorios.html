@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Relatórios</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/relatorios.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                <i class="fa-solid fa-boxes-stacked"></i>
+                <h2>Controle de Estoque</h2>
+                <span>Relatório</span>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+                    <li><a href="cadastro.html"><i class="fa-solid fa-plus"></i> Cadastro</a></li>
+                    <li><a href="estoque.html"><i class="fa-solid fa-box"></i> Estoque</a></li>
+                    <li><a href="descarte.html"><i class="fa-solid fa-recycle"></i> Descarte</a></li>
+                    <li class="active">
+                        <a href="relatorios.html">
+                            <i class="fa-solid fa-chart-column"></i> Relatórios
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../index.html" id="logout">
+                            <i class="fa-solid fa-right-from-bracket"></i> Sair
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </aside>
+
+        <main class="content">
+
+            <header>
+                <h1>Relatórios</h1>
+                <p>Acompanhe indicadores, estoque e descartes</p>
+            </header>
+
+            <!-- indicadores -->
+
+            <section class="cards-relatorio">
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-boxes-stacked"></i>
+                    </div>
+                    <div>
+                        <h2 id="totalMateriais">0</h2>
+                        <span>Tipos de materiais</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-cubes"></i>
+                    </div>
+                    <div>
+                        <h2 id="totalQuantidade">0</h2>
+                        <span>Unidades em estoque</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-recycle"></i>
+                    </div>
+                    <div>
+                        <h2 id="totalDescarte">0</h2>
+                        <span>Unidades descartadas</span>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- gráficos -->
+
+            <section class="relatorios-graficos">
+
+                <div class="grafico-relatorio">
+
+                    <div class="grafico-header">
+                        <h2>Distribuição do estoque</h2>
+                        <p>Quantidade de materiais por categoria</p>
+                    </div>
+
+                    <div class="chart-box">
+                        <canvas id="graficoMateriais"></canvas>
+                    </div>
+
+                </div>
+
+                <div class="grafico-relatorio">
+
+                    <div class="grafico-header">
+                        <h2>Distribuição dos descartes</h2>
+                        <p>Quantidade descartada por categoria</p>
+                    </div>
+
+                    <div class="chart-box">
+                        <canvas id="graficoDescarte"></canvas>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- biblioteca de gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+
+    <!-- armazenamento local -->
+    <script src="../js/storage.js"></script>
+
+    <!-- lógica dos relatórios -->
+    <script src="../js/relatorios.js"></script>
+
+</body>
+</html>
