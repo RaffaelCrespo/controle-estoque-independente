@@ -1,14 +1,18 @@
-# Controle de Estoque São José dos Pinhais
+# Controle de Estoque — São José dos Pinhais
 
-Sistema web de gerenciamento de estoque desenvolvido como projeto acadêmico e de portfólio, com foco no controle de materiais, acompanhamento de quantidades e registro de descartes.
+**Sistema web para gerenciamento de estoque**, desenvolvido como projeto acadêmico e de portfólio, com foco no controle de materiais, acompanhamento de quantidades e registro de descartes.
+
+🌐 **[Acessar demonstração online](https://raffaelcrespo.github.io/controle-estoque-independente/)**
+
+💻 **[Visualizar código-fonte no GitHub](https://github.com/RaffaelCrespo/controle-estoque-independente)**
 
 ## Sobre o projeto
 
-A aplicação permite gerenciar materiais, acompanhar o estoque disponível, registrar descartes e visualizar indicadores por meio de um dashboard.
+A aplicação permite cadastrar e gerenciar materiais, acompanhar o estoque disponível, registrar descartes e visualizar indicadores por meio de um dashboard.
 
-Esta versão foi desenvolvida para funcionar de forma independente, utilizando o armazenamento local do navegador (`localStorage`), sem necessidade de autenticação, banco de dados externo ou serviços Firebase.
+O sistema funciona de forma independente, utilizando o armazenamento local do navegador (`localStorage`), sem necessidade de autenticação, banco de dados externo ou infraestrutura de backend.
 
-O sistema possui dados fictícios para facilitar a demonstração de suas funcionalidades.
+A aplicação conta com dados fictícios para facilitar a demonstração de suas funcionalidades.
 
 ## Demonstração visual
 
@@ -61,7 +65,7 @@ O sistema possui dados fictícios para facilitar a demonstração de suas funcio
 
 O projeto utiliza a API `localStorage` do navegador para armazenar os registros da aplicação.
 
-Essa abordagem permite manter os dados salvos após atualizar ou fechar a página, sem depender de um servidor de banco de dados.
+Essa abordagem permite manter os dados salvos mesmo após atualizar ou fechar a página, sem depender de um servidor de banco de dados.
 
 **Limitações do armazenamento local:**
 
@@ -70,14 +74,14 @@ Essa abordagem permite manter os dados salvos após atualizar ou fechar a págin
 - A limpeza dos dados do navegador pode apagar os registros armazenados.
 - A demonstração utiliza dados fictícios.
 
-## Como executar o projeto
+## Como executar o projeto localmente
 
 1. Baixe ou clone este repositório.
 2. Abra a pasta do projeto no Visual Studio Code.
 3. Abra o arquivo `index.html` utilizando a extensão Live Server.
 4. A aplicação será aberta no navegador.
 
-Não é necessário configurar Firebase, instalar dependências de backend ou criar um banco de dados.
+Não é necessário instalar dependências de backend ou configurar um banco de dados.
 
 *Observação: a biblioteca Chart.js e outros recursos externos podem precisar de conexão com a internet para serem carregados.*
 
@@ -87,4 +91,4 @@ O projeto tem como objetivo aplicar conhecimentos de desenvolvimento web, manipu
 
 ## Autor
 
-Raffael Crespo
+**Raffael Crespo**
